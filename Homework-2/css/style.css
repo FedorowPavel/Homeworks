@@ -2,28 +2,35 @@ th {
     padding: 10px;
     background-color: black;
     text-transform: uppercase;
-}
+    }
+tr th:first-child {
+    border-radius: 10px 0 0 0;
+    }
+tr th:last-child {
+     border-radius: 0 10px 0 0 ;
+    } 
 table {
     color: white;
     width: 100%;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* background-color: black; */
+    /* border-top-right-radius: 10px;  */
+    /* border-top-left-radius: 10px; */
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 th, td {
-    width: 12%;
+   width: 12%;
 }
 td {
     vertical-align: top;
     padding: 10px;
-}
+    }
 .calendar {
     height: 150px;
     background-color: rgb(87, 83, 83);
-}
+    }
 
 body {
     background-color: #858585;
