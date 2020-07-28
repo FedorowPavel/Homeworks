@@ -1,6 +1,6 @@
 th {
     padding: 10px;
-    background-color: black;
+    background-color: black; 
     text-transform: uppercase;
     }
 tr th:first-child {
@@ -13,9 +13,9 @@ table {
     color: white;
     width: 100%;
     /* overflow: hidden; */
-    /* background-color: black; */
-    /* border-top-right-radius: 10px;  */
-    /* border-top-left-radius: 10px; */
+    /* background-color: black; 
+    border-top-right-radius: 10px;  
+    border-top-left-radius: 10px;  */
     letter-spacing: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }

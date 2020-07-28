@@ -1,0 +1,35 @@
+.divOut {
+    width: 300px;
+    height: 200px;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: white;
+    padding: 1em;
+   }
+h1 {
+    font-size: 1.2em;
+    margin-bottom: 0em;
+    background-image: url("img_3les.jpg");
+    background-repeat: no-repeat;
+    background-position: 3em 0;
+    background-size: contain;
+    padding: .1em;
+    margin: .5em .5em 0 .5em;
+   }
+.divIn {
+    height: 70%;
+    overflow: auto;
+    padding: 0.5em 3.5em 0.5em 0.5em;
+    background-color: #ffc;
+    border: double .5em rgba(0,102,255,.1);
+    border-radius: 10px;
+    padding: 0 .1em;
+    background-clip: content-box;
+    /* background-image: url("img_3les.jpg");
+    background-repeat: no-repeat;
+    background-position: 15em 0;
+    background-attachment: local; */
+    }
+p {
+    
+}
