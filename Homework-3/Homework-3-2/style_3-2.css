@@ -1,4 +1,4 @@
-h2 {
+.underline {
     text-decoration: underline;
 }
 
@@ -57,9 +57,9 @@ a:active {
     font-style: italic;
 }
 
-.noUnder {
+/* .noUnder {
     text-decoration: none;
-    }
+    } */
     
 div {
     margin: 5px;
