@@ -11,7 +11,7 @@ h1 {
     margin-bottom: 0em;
     background-image: url("img_3les.jpg");
     background-repeat: no-repeat;
-    background-position: 3em 0;
+    background-position: top right 0.5em;
     background-size: contain;
     padding: .1em;
     margin: .5em .5em 0 .5em;
