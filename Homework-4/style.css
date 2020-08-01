@@ -1,0 +1,125 @@
+body {
+    background: #333745;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px rgba(0,0,0, 0.6);
+}
+
+.card {
+    width: 220px;
+    height: 410px;
+    border-radius: 1.5rem;
+    padding: 30px;
+    box-shadow: 2px 2px 46px -4px rgba(0,0,0,0.6);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+}
+/* 1st card's background */
+.card:nth-child(1) {
+    background: linear-gradient(to left, #91eae4, #86a8e7, #7f7fd5 );
+}
+/* 2nd card's background */
+.card:nth-child(2) {
+    background: linear-gradient(to left, #ff426c, #ff464a, #ff4a2c );
+    height: 440px;
+    position: relative;
+    top: 30px;
+}
+/* 3d card's background */
+.card:nth-child(3) {
+    background: linear-gradient(to left, #90c23c, #49bc6d, #01b19b );
+    }
+
+
+.card .type {
+    letter-spacing: 0.1rem;
+    margin-top: 30px;
+}
+
+.card .price {
+    font-size: 7.5rem;
+}
+
+.card .price .dollar-sign {
+    font-size: 1.8rem;
+}
+
+.card .plan {
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.card .plan::before, .card .plan::after {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 45%;
+}
+.card .plan::before {
+    left: 15%;
+}
+.card .plan::after {
+   right: 15%; 
+}
+
+.details {
+    list-style: none;
+    padding: 0%;
+}
+
+.card .details li {
+    margin: 15px;
+    text-transform: capitalize;
+}
+
+.card .details span {
+    text-transform: uppercase;
+}
+
+.subscribe-botom {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+    padding: 0px 20px 0px 20px;
+    border-radius: 1.5rem 0 1.5rem 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    }
+
+/* 1st card's background price layout */
+.card:nth-child(1) .price-on-background {
+    font-size: 10rem;
+    text-shadow: none;
+    position: absolute;
+    left: -15%;
+    top: 5%;
+    opacity: 10%;
+    }
+
+/* 2st card's background price layout */
+.card:nth-child(2) .price-on-background {
+    font-size: 9rem;
+    text-shadow: none;
+    position: absolute;
+    left: 0%;
+    top: 8%;
+    opacity: 10%;
+}
+
+/* 3d card's background price layout */
+.card:nth-child(3) .price-on-background {
+    font-size: 10rem;
+    text-shadow: none;
+    position: absolute;
+    left: -35%;
+    top: 3%;
+    opacity: 10%;
+}
