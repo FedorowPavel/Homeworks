@@ -1,0 +1,189 @@
+body {
+    background-color: rgb(190, 253, 255);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+margin: 10px auto 5px;
+}
+
+header p {
+    margin: 0 auto;
+}
+
+
+/* background flower for h1 h2*/
+h1,h2 {
+    display: inline-block;
+    position: relative;
+}
+
+h1::after, h2::after {
+    content: url("icons/flower-24.png");
+    position: absolute;
+    height: 100%;
+}
+
+
+header  {
+    text-align: center;
+}
+
+/* header list settings start*/
+header ul {
+    list-style-position: inside ;
+    padding: 0;
+    display: inline-block
+}
+
+header li {
+    text-align: left;
+}
+/* list settings end*/
+
+main {
+    width: 90%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+.container {
+    width: 97%;
+    margin: 0 auto;
+    position: relative;
+    }
+
+.container ul {
+    background-color: rgb(184, 177, 177);
+    border-radius: 5px;
+}
+
+
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
+
+.container-inner {
+    width: 97%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 0 50px 0;
+}
+
+.container-inner-inner {
+    width: 97%;
+    margin: 5px auto;
+    position: relative;
+    border: 2px solid black;
+    padding: 5px;
+    overflow: auto;
+}
+
+img {
+    width: 170px;
+    margin: 5px;
+}
+
+.container-inner-inner img  {
+    float: right;
+   
+}
+
+.container-inner-inner:nth-of-type(2) img {
+    float: left;
+}
+
+/* top botton settings*/
+.go-top-botton {
+    display: inline-block;
+    background-color: rgb(90, 199, 207);
+    padding: 5px 20px;
+    margin: 10px 0;
+    border: 1px solid white;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    box-shadow: black 2px  2px;
+}   
+
+.go-top-botton:active {
+    opacity: 70%;
+    transition: 0.1s;
+    box-shadow: black 0px  0px;
+    right: -2px;
+    bottom: -2px;
+}
+
+
+.articles {
+    display: block;
+    width: 80px;
+    height: 20px;
+    padding: 10px;
+    margin: 5px;
+    background-color: rgb(214, 170, 255);
+    border: 1px solid black;
+    overflow: hidden;
+
+}
+
+.articles:target {
+    overflow: visible;
+    height: auto;
+    width: auto;
+    max-width: 80%;
+    background-color: white;
+}
+
+.articles:target a{
+    text-decoration: underline;
+    color: black;
+
+}
+
+
+/* footer styling*/
+footer {
+    background-color: rgb(184, 177, 177);
+    margin: 10px 0 0 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-style: italic;
+    padding: 5px 5px;
+
+}
+
+footer h3 {
+    margin: 10px 0 5px 0 ;
+}
+
+footer i {
+    margin: 5px;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: black;
+}
+
+footer a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+}
+
+
+
+
+
