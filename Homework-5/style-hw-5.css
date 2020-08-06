@@ -78,13 +78,14 @@ hr {
     padding: 0 0 50px 0;
 }
 
-.container-inner-inner {
+.articles-with-img {
     width: 97%;
     margin: 5px auto;
     position: relative;
     border: 2px solid black;
     padding: 5px;
-    overflow: auto;
+    /* overflow: auto; */
+    display: flow-root;
 }
 
 img {
@@ -92,12 +93,12 @@ img {
     margin: 5px;
 }
 
-.container-inner-inner img  {
+.articles-with-img img  {
     float: right;
    
 }
 
-.container-inner-inner:nth-of-type(2) img {
+.articles-with-img:nth-of-type(2) img {
     float: left;
 }
 
