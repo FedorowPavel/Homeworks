@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-    backdrop-filter: blur(2px);
+    
     overflow: auto;
     position: relative;
     top: 50%;
