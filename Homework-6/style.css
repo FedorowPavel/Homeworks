@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background: url(images/bg-main-sea.jpg) no-repeat top center ;
+    background-size: cover;
+    height: 100vh;
+}
+
+.wrapper {
+    backdrop-filter: blur(2px);
+    overflow: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.booking-form {
+    overflow: auto;
+    width: 550px;
+    margin: 10px auto;
+    background: linear-gradient(#07575b,#0f7d83);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+fieldset {
+    font-weight: 600;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #91ccdb;
+    padding: 10px;
+    border: 2px solid rgb(41, 41, 41);
+}
+
+legend {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 80%;
+    text-align: center;
+    background: rgb(243, 223, 85);
+    padding: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+
+label, .label-gender {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+}
+
+.form-input, textarea, select {    
+    background: rgb(224, 232, 255);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    padding-left: 7px;
+    color: rgb(0, 0, 0);
+}
+
+ textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px 10px;
+    resize: vertical;
+    transition: 0s;
+    }
+
+.form-input:focus, textarea:focus {
+    box-shadow: 0 0 7px  rgb(106, 235, 21);
+    background: rgb(255, 255, 255);
+    transition: 0.25s;
+}
+
+.input-block {
+    margin-bottom: 10px;
+}
+
+.label-input-wishes {
+    text-align: left;
+    margin-top: 20px;
+}
+
+
+
+.label-radio-male,.label-radio-female {
+    font-weight: 500;
+}
+
+input[type=submit] {
+    appearance: none;
+    padding: 10px;
+    border: 2px solid;
+    border: 2px solid black;
+    background: rgb(243, 223, 85);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    float: right;
+    cursor: pointer;
+    font-style: italic;
+    
+   }
+
+input[type=submit]:active {
+    background: rgb(243, 223, 85, 0.4);
+
+}
+
+
+
