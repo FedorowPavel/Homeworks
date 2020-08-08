@@ -1,0 +1,120 @@
+body {
+    font-family: "Open sans", sans-serif;
+}
+
+.container {
+    padding-top: 20px ;
+}
+
+
+.block {
+    height: 575px;
+    width: 430px;
+    background: linear-gradient(rgba(35,43,85,0.5), rgba(35,43,85,0.95));
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.nav {
+    padding-top: 40px;
+
+}
+
+.links li {
+    display: inline;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-left: 10px;
+   
+}
+
+.links li a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.3);
+
+}
+
+.links .active a {
+    padding-bottom: 10px;
+    color: white;
+    border-bottom: solid 2px #1059ff;
+}
+
+form {
+    padding-top: 55px;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.form-input {
+    width: 100%;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 0;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+}
+
+.form-label, .checkbox-label {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    display: block;
+    font-weight: 400;
+}
+
+
+.form-input:focus {
+    outline: none;
+    background: rgba(255,255,255,0.3);
+}
+
+button[type=submit] {
+    background: #1059ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    width: 100%;
+    text-align: center;
+    padding: 20px 37px;
+    box-sizing: border-box;
+    border-top: 2px solid rgba(255,255,255,0.3);
+    }
+
+.forgot-password a{
+    text-decoration: none;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.8em;
+}
+
+/* keep me sign in section* */
+
+/* input[id=keepSignIn] {
+    display: none;
+} 
+
+.checkbox-label {
+    padding: 0;
+    margin-bottom: 50px;
+    padding: 10px 0 0 0;
+    cursor: pointer;
+}  */
+
+
+
