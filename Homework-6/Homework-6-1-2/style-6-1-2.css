@@ -194,6 +194,9 @@ input[type=checkbox]:checked + .checkbox::after {
 textarea {
     width: 100%;
     resize: vertical;
+    transition: none;
+    transition: border 0.6s;
+   
 }
 
 textarea:hover{
