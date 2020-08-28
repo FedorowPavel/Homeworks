@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b4b3b3;
+    border-radius: 10px;
+}
+/* scrollbar */
+
+.top-menu {
+    height: 40px;
+}
+
+.optional-menu,
+.logo,
+.aside-options {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: auto;
+    
+    cursor: pointer;
+}
+
+/* кнопка меню */
+.optional-menu {
+    float: left;
+    width: 40px;
+}
+
+.optional-menu i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    color: rgb(151, 147, 147);
+}
+
+.optional-menu:hover > i {
+    color: black;
+}
+
+/*кнопка утюб*/
+.logo {
+    float: left;
+    width: 100px;
+
+    background-image: url('images/logo-30px.png');
+    background-repeat: no-repeat;
+    background-position: 0 4px ;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.5;
+}
+
+/* форма поиска*/ 
+.input-search {
+    float: left;
+    position: relative;
+    width: 200px;
+    margin: 8px 0 8px 20px;
+}
+
+.input-search input[type=search],
+.input-search input[type=submit] {
+    height: 24px;
+    padding-left: 10px;
+    margin: 0;
+    appearance: none;
+    
+    border: 1px rgb(170, 168, 168) solid;
+    border-radius: 3px 0 0 3px;
+    box-sizing: border-box;
+    
+    box-shadow: 0px 0px 4px -3px #000000 inset;
+}
+
+.input-search input[type=search] {
+    width: 80%;
+}
+
+.input-search input[type=submit] {
+    appearance: none;
+    width: 40px;
+    margin-left: -4px;
+
+    border-radius: 0 3px 3px 0;
+    box-shadow: none;
+    background-image: url('images/search-icon-15.png');
+    background-repeat: no-repeat;
+    background-position: 12px 4px;
+    
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.input-search input[type=submit]:hover {
+    opacity: 1;
+}
+
+/*tooltip для поиска и для названия канала*/
+.tooltip,
+.chanel-name > i::after {
+    visibility: hidden;
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    top: 120%;
+    right: -10%;
+    padding: 5px 5px;
+    z-index: 1;
+
+    background-color: rgb(80, 80, 80);
+    border-radius: 6px;
+
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8em;
+    
+    transition: 0.3s;
+}
+
+input[type=submit]:hover + .tooltip,
+.chanel-name:hover i::after {
+    visibility: visible;
+    opacity: 0.9;
+}
+
+/* правое верхнее меню и меню на фоне главного изображения*/
+.aside-options {
+   float: right;
+}
+
+.aside-options ul,
+.header-social ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.aside-options li,
+.header-social li {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+.aside-options i,
+.header-social img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    color: rgb(151, 147, 147);
+    transition: 0.2s;
+}
+
+.aside-options ul li:hover i {
+    cursor: pointer ;
+    color: black;
+}
+
+/* блок с заглавным изображением */
+.header-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 16.67%;
+    position: relative;
+
+    background-color: rgb(219, 197, 228);
+    background-image: url('images/main-image-1200-200.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ .header-social {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-social ul li {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header-social ul li:hover {
+    opacity: 1;
+}
+
+/*блок информации под главным изображением*/
+
+.chanel-info {
+    width: 100%;
+    height: auto;
+    padding: 10px 50px;
+    overflow: auto;
+    position: relative;
+
+    background-color: rgb(241, 241, 241);
+}
+
+.chanel-img,
+.chanel-info-text {
+    float: left;
+}
+
+.chanel-info img {
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.chanel-info img:hover {
+    border-radius: 50% 50% 50% 50% / 14% 13% 87% 86% ;
+}
+
+.chanel-info-text {
+    padding-left: 20px;
+    height: 70px;
+}
+
+.chanel-name,
+.chanel-subscribers {
+    height: 35px;
+}
+
+.chanel-name {
+    padding-top: 10px;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.chanel-subscribers {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.chanel-info-asside  {
+    float: right;
+    height: 20px;
+    width: auto;
+    margin: 25px 0px;
+
+    color: rgb(104, 104, 104);
+}
+
+.chanel-info-asside span {
+    padding: 7px 10px;
+    margin: 0 10px 0 0;
+
+    background-color: rgba(128, 128, 128, 0.2);
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.chanel-info-text i {
+    color: rgb(104, 104, 104) ;
+    font-size: 0.8em;
+}
+
+.chanel-info-asside i {
+    font-size: 1.2em;
+}
+
+.chanel-info-asside i:hover,
+.chanel-info-asside span:hover {
+    cursor: pointer;
+}
+
+/*контент tooltip'а названия канала*/
+.chanel-name > i::after {
+    content: 'subscribed!';
+    position: relative;
+    position: relative;
+    left: -30px;
+    top: 25px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+/* навигация */
+.nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    height: auto;
+    padding: 5px 50px 0 50px;
+    overflow: hidden;
+
+    background-color: rgb(241, 241, 241);
+}
+
+.nav a,
+.featured-channels h2,
+.related-channels h2 { 
+    display: block;
+    padding: 0px 20px 10px;
+
+    font-size: 0.9em;
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav ul li {
+    position: relative;
+    float: left;
+    border-bottom: 4px solid rgba(99, 99, 99, 0);
+    transition: 0.1s;
+}
+
+.nav ul li:target {
+    border-bottom: 4px solid rgb(99, 99, 99);
+}
+
+.nav ul li:target a {
+    color: rgb(24, 24, 24);
+}
+
+.animation-border {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 4px;
+
+    background-color: rgba(99, 99, 99, 0.5);
+    transition: 0.3s;
+}
+
+.nav ul li:hover .animation-border {
+    bottom: -4px;
+}
+
+/* основной контент */
+.main-conteiner {
+    width: 100%;
+    height: auto;
+    padding: 0 50px;
+}
+
+.grid-conteiner {
+    display: grid;
+    grid-template-columns: minmax(500px, 1fr) 200px;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+}
+
+.grid-item {
+    box-sizing: border-box;
+    width: auto;
+}
+
+.grid-item a {
+    text-decoration: none ;
+    color: inherit;
+    font-size: 1.1em;
+}
+
+.grid-item span {
+    color: rgb(99, 99, 99);
+    font-size: 0.8em;
+    line-height: 1.6em;
+    text-overflow: clip;
+}
+
+/* grid блок main  */
+
+/* верхний блок основного контента */
+.item1 {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-auto-rows: 200px;
+    grid-column-gap: 10px;
+    align-items: center;
+}
+
+.item1 :nth-child(2) {
+    height: 150px;
+    align-items: start;
+}
+
+.item1-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item6 {
+    grid-row: 1 / 5;
+    grid-column: 2 / 3;
+}
+
+/* боковая панель */
+.item6 {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px auto;
+}
+
+.item6 .featured-channels {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.8);
+}
+
+.featured-channels h2,
+.related-channels h2 {
+    padding: 0;
+    color: rgb(46, 46, 46);
+}
+
+.featured-channels a,
+.related-channels a {
+    text-decoration: none;
+}
+
+.featured-channels img,
+.related-channels img {
+    float: left;
+    border-radius: 50%;
+}
+
+.featured-channels-info {
+    overflow: auto;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.featured-channels-info span {
+    padding-left: 10px;
+    line-height: 30px;
+    color: rgb(46, 46, 46);
+}
+
+span[class=subscribed-span] {
+    padding: 3px 5px; 
+
+    background-color: rgba(128, 128, 128, 0.2);
+    color: rgb(104, 104, 104);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* всплывающие значки на видео */
+.item1-img {
+    position: relative;
+}
+
+.item1-img::before {
+    content: " ";
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(0, -50%);
+    border-width: 20px 35px;
+    border-style: solid;
+    border-color:  transparent transparent transparent rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.item1:hover .item1-img::before {
+    opacity: 1;
+    z-index: 1;
+}
+
+.item1:hover img {
+    opacity: 0.9;
+}
+
+/* блоки со несколькими видео */
+.item-videos-list {
+    padding-top: 10px;
+    display: grid;
+    overflow: hidden;
+    overflow-x: scroll;
+    grid-template-columns: repeat(8, 200px);
+    grid-template-rows: auto auto;
+    grid-gap: 5px 5px;
+
+    border-top: 1px solid rgba(224, 224, 224, 0.8);
+}
+
+.item-videos-title {
+    left: 0;
+    grid-column: 1 / -1;
+}
+
+.item-videos {
+    position: relative;
+    font-size: 0.9em;
+    width: 200px;
+    height: 200px;
+}
+
+.item-videos img {
+    cursor: pointer; 
+}
+
+.item-videos:hover img {
+    opacity: 0.9;
+}
+
+.item-videos::after {
+    content: " ";
+    opacity: 0;
+    position: absolute;
+    top: 33%;
+    left: 45%;
+    transform: translate(0, -50%);
+    z-index: 0;
+
+    border-width: 15px 25px;
+    border-style: solid;
+    border-color:  transparent transparent transparent rgb(255, 255, 255);
+    transition: 0.2s;
+}
+
+.item-videos:hover.item-videos::after {
+    opacity: 1;
+}
+
+ /* для экранов меньше 900 и больше 600 */
+
+@media screen and (max-width: 900px ) {
+    .main-conteiner {
+    padding: 0 10px;
+}
+
+.grid-conteiner {
+    grid-template-columns: 1fr 150px;
+ 
+}
+
+.nav {
+    padding: 0px 10px 0 10px;
+}
+
+.nav a { 
+    padding: 0px 15px 5px;
+  
+}
+
+.chanel-info {
+    padding: 5px 10px;
+
+}
+
+.chanel-info-asside  {
+    display: none;
+}
+
+.header-image {
+    background-image: url('images/main-image-900-150.jpg');
+}
+
+
+}
+
+
+ /* для экранов меньше 600 */
+
+@media screen and (max-width: 600px )  {
+    .header-image {
+        background-image: url('images/main-image-600-100.jpg');
+    }
+    .chanel-name {
+        padding-top: 20px;
+        font-size: 1.3em;
+        
+    }
+    .item6 {
+        display: none;
+    }
+
+    .grid-conteiner {
+        grid-template-columns: 1FR;
+    }
+    .input-search {
+        width: 60%;
+    }
+
+
+    .aside-options,
+    .header-social,
+    .chanel-subscribers,
+    .animation-border {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+    }
+    .nav ul li {
+        float: none;
+        border: none;
+        border-top: 1px solid rgb(204, 204, 204);
+        padding-top: 5px;
+    }
+    .nav ul a {
+        text-align: center;
+    }
+
+    .nav ul li:hover {
+        background-color: rgb(194, 191, 191);
+    }
+
+    .nav ul li:target {
+        border-bottom: none;
+        background-color: rgb(194, 191, 191);
+    }
+
+    .item-videos-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: auto ;
+        grid-row-gap: 20px;
+
+    }
+
+    .item-videos {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .item-videos,
+    .item-videos-title {
+        justify-self: center;
+        align-self: center;
+    }
+    }
