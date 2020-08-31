@@ -71,12 +71,12 @@
 .input-search {
     float: left;
     position: relative;
-    width: 200px;
     margin: 8px 0 8px 20px;
 }
 
 .input-search input[type=search],
 .input-search input[type=submit] {
+    display: inline-block;
     height: 24px;
     padding-left: 10px;
     margin: 0;
@@ -90,13 +90,13 @@
 }
 
 .input-search input[type=search] {
-    width: 80%;
+    width: 70%;
 }
 
 .input-search input[type=submit] {
     appearance: none;
     width: 40px;
-    margin-left: -4px;
+    margin-left: -5px;
 
     border-radius: 0 3px 3px 0;
     box-shadow: none;
@@ -121,7 +121,7 @@
     position: absolute;
     width: auto;
     top: 120%;
-    right: -10%;
+    right: 9%;
     padding: 5px 5px;
     z-index: 1;
 
@@ -596,6 +596,12 @@ span[class=subscribed-span] {
  /* для экранов меньше 600 */
 
 @media screen and (max-width: 600px )  {
+    .logo {
+        width: 35px;
+        background-image: url('images/logo-30px-cuted.png'); 
+    }
+    
+
     .header-image {
         background-image: url('images/main-image-600-100.jpg');
     }
@@ -612,6 +618,7 @@ span[class=subscribed-span] {
         grid-template-columns: 1FR;
     }
     .input-search {
+        margin-left: 10px;
         width: 60%;
     }
 
