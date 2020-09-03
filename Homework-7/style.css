@@ -26,23 +26,18 @@
 .optional-menu,
 .logo,
 .aside-options {
-    position: relative;
-    height: 100%;
-    width: auto;
-    
     cursor: pointer;
 }
 
 /* кнопка меню */
 .optional-menu {
     width: 40px;
+    align-self: center;
+    justify-self: center;
 }
 
 .optional-menu i {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    padding-left: 12px;
 
     color: rgb(151, 147, 147);
 }
@@ -72,8 +67,8 @@
     margin: 8px 0 8px 20px;
 }
 
-.input-search input[type=search],
-.input-search input[type=submit] {
+.input-search .search,
+.input-search .submit {
     display: inline-block;
     height: 24px;
     padding-left: 10px;
@@ -87,11 +82,11 @@
     box-shadow: 0px 0px 4px -3px #000000 inset;
 }
 
-.input-search input[type=search] {
+.input-search .search {
     width: 70%;
 }
 
-.input-search input[type=submit] {
+.input-search .submit {
     appearance: none;
     width: 40px;
     margin-left: -5px;
@@ -106,7 +101,7 @@
     cursor: pointer;
 }
 
-.input-search input[type=submit]:hover {
+.input-search .submit:hover {
     opacity: 1;
 }
 
@@ -117,7 +112,6 @@
     opacity: 0;
     display: inline-block;
     position: absolute;
-    width: auto;
     top: 120%;
     right: 20%;
     padding: 5px 5px;
@@ -134,7 +128,7 @@
     transition: 0.3s;
 }
 
-input[type=submit]:hover + .tooltip,
+.submit:hover + .tooltip,
 .chanel-name:hover i::after {
     visibility: visible;
     opacity: 0.9;
@@ -143,16 +137,19 @@ input[type=submit]:hover + .tooltip,
 /* правое верхнее меню и меню на фоне главного изображения*/
 .aside-options ul,
 .header-social ul {
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    padding-inline-start: 0;
     list-style-type: none;
 }
 
 .aside-options li,
 .header-social li {
+    display: block;
     position: relative;
     height: 40px;
     width: 40px;
-    float: right;
+   
 }
 
 .aside-options i,
@@ -186,10 +183,6 @@ input[type=submit]:hover + .tooltip,
 }
 
  .header-social {
-    height: auto;
-    width: auto;
-    overflow: auto;
-    float: right;
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -214,8 +207,6 @@ input[type=submit]:hover + .tooltip,
     width: 100%;
     height: auto;
     padding: 10px 50px;
-    overflow: auto;
-    position: relative;
 
     background-color: rgb(241, 241, 241);
 }
@@ -252,7 +243,6 @@ input[type=submit]:hover + .tooltip,
 
 .chanel-info-asside  {
     height: 20px;
-    width: auto;
     margin: 27px 0px;
 
     color: rgb(104, 104, 104);
@@ -286,7 +276,6 @@ input[type=submit]:hover + .tooltip,
 .chanel-name > i::after {
     content: 'subscribed!';
     position: relative;
-    position: relative;
     left: -30px;
     top: 25px;
 
@@ -297,11 +286,8 @@ input[type=submit]:hover + .tooltip,
 .nav {
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 3;
-    height: auto;
     padding: 5px 50px 0 50px;
-    overflow: hidden;
 
     background-color: rgb(241, 241, 241);
 }
@@ -323,11 +309,11 @@ input[type=submit]:hover + .tooltip,
     display: grid;
     grid-template-columns: repeat(6, auto);
     justify-content: start;
-
-    list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+
+    list-style-type: none;
 }
 
 .nav ul li {
@@ -362,8 +348,6 @@ input[type=submit]:hover + .tooltip,
 
 /* основной контент */
 .main-conteiner {
-    width: 100%;
-    height: auto;
     padding: 0 50px;
 }
 
@@ -376,7 +360,6 @@ input[type=submit]:hover + .tooltip,
 
 .grid-item {
     box-sizing: border-box;
-    width: auto;
 }
 
 .grid-item a {
@@ -389,7 +372,6 @@ input[type=submit]:hover + .tooltip,
     color: rgb(99, 99, 99);
     font-size: 0.8em;
     line-height: 1.6em;
-    text-overflow: clip;
 }
 
 /* grid блок main  */
@@ -410,7 +392,6 @@ input[type=submit]:hover + .tooltip,
 
 .item1-text {
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .item6 {
@@ -460,7 +441,7 @@ input[type=submit]:hover + .tooltip,
     color: rgb(46, 46, 46);
 }
 
-span[class=subscribed-span] {
+.subscribed-span {
     padding: 3px 5px; 
 
     background-color: rgba(128, 128, 128, 0.2);
@@ -551,40 +532,38 @@ span[class=subscribed-span] {
  /* для экранов меньше 900 и больше 600 */
 
 @media screen and (max-width: 900px ) {
-    .main-conteiner {
-    padding: 0 10px;
+        .main-conteiner {
+        padding: 0 10px;
+    }
+
+    .grid-conteiner {
+        grid-template-columns: 1fr 150px;
+    
+    }
+
+    .nav {
+        padding: 0px 10px 0 10px;
+    }
+
+    .nav a { 
+        padding: 0px 15px 5px;
+    
+    }
+
+    .chanel-info {
+        padding: 5px 10px;
+
+    }
+
+    .chanel-info-asside  {
+        display: none;
+    }
+
+    .header-image {
+        background-image: url('images/main-image-900-150.jpg');
+    }
+
 }
-
-.grid-conteiner {
-    grid-template-columns: 1fr 150px;
- 
-}
-
-.nav {
-    padding: 0px 10px 0 10px;
-}
-
-.nav a { 
-    padding: 0px 15px 5px;
-  
-}
-
-.chanel-info {
-    padding: 5px 10px;
-
-}
-
-.chanel-info-asside  {
-    display: none;
-}
-
-.header-image {
-    background-image: url('images/main-image-900-150.jpg');
-}
-
-
-}
-
 
  /* для экранов меньше 600 */
 
@@ -592,7 +571,7 @@ span[class=subscribed-span] {
     .top-menu {
     grid-template-columns: auto auto 1fr ;
     
-}
+    }
 
     .logo {
         width: 35px;
@@ -629,19 +608,20 @@ span[class=subscribed-span] {
     }
 
     .nav {
-        position: relative;
+        position: initial;
     }
 
     .nav ul {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
     }
+
     .nav ul li {
-        
         border: none;
         border-top: 1px solid rgb(204, 204, 204);
         padding-top: 5px;
     }
+
     .nav ul a {
         text-align: center;
     }
@@ -659,7 +639,6 @@ span[class=subscribed-span] {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-template-rows: auto ;
         grid-row-gap: 20px;
-
     }
 
     .item-videos {
@@ -671,4 +650,5 @@ span[class=subscribed-span] {
         justify-self: center;
         align-self: center;
     }
-    }
+
+}
