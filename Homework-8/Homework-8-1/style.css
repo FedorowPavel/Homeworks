@@ -244,6 +244,7 @@ h3 {
     
     .emty {
         display: none;
+        bgc
     }
 
     .grid-header-item.blue {
@@ -319,7 +320,6 @@ h3 {
     .grid-item-20,
     .grid-item-21 {
         display: block;
-        padding-top: 10px;
         padding-left: 15px; 
     }
 
