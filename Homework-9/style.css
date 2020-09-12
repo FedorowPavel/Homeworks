@@ -1,0 +1,104 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/space.png);
+    
+    height: 600px;
+}
+
+.moon {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    height: auto;
+    transform: scale(0.3);
+}
+
+.hover-container {
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: relative;
+}
+
+.shuttle {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    
+    transition-property: transform;
+    transition-duration: 4s;
+    transition-timing-function: ease;
+}
+
+.shuttle img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.shuttle1 {
+    transition-delay: 0s;
+}
+.hover-container:hover .shuttle1 {
+    transform: translate(0, 200px) rotate(360deg);
+}
+
+
+.shuttle2 {
+    transition-delay: 0.1s;
+}
+.hover-container:hover .shuttle2 {
+    transform: translate(200px, 200px)  rotate(360deg);
+    transform-origin: 0%;
+}
+
+.shuttle3 {
+    transition-delay: 0.2s;
+}
+.hover-container:hover .shuttle3 {
+    transform: translate(200px, 0)  rotate(360deg);
+}
+
+.shuttle4 {
+    transition-delay: 0.3s;
+}
+.hover-container:hover .shuttle4 {
+    transform: translate(200px, -200px)  rotate(360deg);
+}
+
+
+.shuttle5 {
+    transition-delay: 0.4s;
+}
+.hover-container:hover .shuttle5 {
+    transform: translate(0, -200px)  rotate(360deg);
+}
+
+
+.shuttle6 {
+    transition-delay: 0.5s;
+}
+.hover-container:hover .shuttle6 {
+    transform: translate(-200px, -200px)  rotate(360deg);
+}
+
+
+.shuttle7 {
+    transition-delay: 0.6s;
+}
+.hover-container:hover .shuttle7 {
+    transform: translate(-200px,0)  rotate(360deg);
+}
+
+
+.shuttle8 {
+    transition-delay: 0.7s;
+}
+.hover-container:hover .shuttle8 {
+    transform: translate(-200px, 200px)  rotate(360deg);
+}
+
+
