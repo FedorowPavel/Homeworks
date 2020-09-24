@@ -27,7 +27,8 @@ main {
 
 
 .asside__header {
-    background-image: url('images/ferry-500-500.jpg');
+    background-image: url('images/ferry-500-500.jpg') ;
+    background-position: center  center;
     background-color: gray;
     background-size: cover;
     display: flex;
@@ -101,9 +102,6 @@ main {
     }
 
     .asside__header {
-        background-image: none;
-        background-color: gray;
-        
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -114,8 +112,7 @@ main {
     .asside__header p {
         font-size: 30px;
         margin: 0;
-        background-color: gray;
-        padding-left: 30px;
+        padding: 0 10px;
         
     }
 
