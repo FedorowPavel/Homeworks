@@ -1,0 +1,128 @@
+@mixin slider ($sliderCount) {
+    @for $i from 1 through $sliderCount {
+        .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__nav > label:nth-child(#{$i}) {
+    background: #ccc;      
+        }
+    }
+
+    @for $i from 1 through $sliderCount {
+        .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__items .carousel__item:nth-child(#{$i}) {
+    opacity: 1;
+        }   
+    }
+
+    // @for $i from 1 through $sliderCount {
+    //     .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child( #{$sliderCount}){
+    // z-index: 3;
+    //     }
+    // }
+
+
+
+    
+     
+}
+
+.container {
+   width: 900px;
+    min-height: 600px;
+    margin: 50px auto;
+    overflow: hidden; 
+
+    
+    & .carousel {
+    width: 100%;
+    position: relative;
+
+        & .carousel__items {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: relative;
+            height: 600px;
+            
+            & .carousel__item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                transition: opacity 1s;
+
+                & .carousel__item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }       
+    }
+
+    .carousel > input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        }
+
+    .carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item {
+        opacity: 0;
+    }
+
+    @include slider (5) {
+
+        }
+
+    
+
+    & .carousel__nav {
+        position: absolute;
+        bottom: 1%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 3; 
+
+        &.carousel__nav label {
+            display: inline-block;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+    }
+
+    & .carousel__prev > label,
+    & .carousel__next > label {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        display: block;
+        border: 1px solid #fff;
+        z-index: 2;
+        top: 50%;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    & .carousel__prev > label {
+     left: 2%;
+    }
+
+    & .carousel__next > label {
+        right: 2%;
+    }
+
+    
+
+
+
+        
+}
+
+
+
