@@ -80,20 +80,25 @@ form {
 }
 
 button[type=submit] {
-    background: #1059ff;
+    background: rgba(16, 89, 255, 1);
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: 0px;
+    cursor: pointer;
     margin-top: 30px;
     margin-bottom: 50px;
     cursor: pointer;
     padding: 0;
 }
 
+.button:hover {
+    cursor: pointer;
+    background: rgb(13, 63, 182);
+}
+
 .forgot-password {
     width: 100%;
     text-align: center;
-    padding: 20px 37px;
+    padding: 20px;
     box-sizing: border-box;
     border-top: 2px solid rgba(255,255,255,0.3);
     }
@@ -108,9 +113,64 @@ button[type=submit] {
 .checkbox-label {
     display: inline-block;
     padding-bottom: 0;
+    
 }
 
 
+[type="checkbox"] {
+    display: none;
+    position: absolute;
+}
+
+[type="checkbox"] + label {
+    position: relative;
+    padding-left: 85px;
+    line-height: 30px;
+    cursor: pointer;
+   
+}
+
+[type="checkbox"] + label::before {
+    content: 'no';
+    display: inline-block;
+    position: absolute;
+    text-align: right;
+    padding-right: 7px;
+    box-sizing: border-box;
+    line-height: 30px;
+    width: 64px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 15px;
+    left: 0;
+    
+}
+
+[type="checkbox"]:checked + label::before {
+    content: 'yes';
+    text-align: left;
+    padding-left: 8px;
+    background-color: #1059ff;
+
+}
+
+[type="checkbox"]:checked + label::after {
+    left: 45px;
+}
+
+
+[type="checkbox"] + label::after {
+    position: absolute;
+    content: ' ';
+    left: 15px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.2);
+    left: 8px;
+    top: 8px;
+}
 
 
 
