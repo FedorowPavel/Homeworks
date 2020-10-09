@@ -9,22 +9,42 @@
         .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__items .carousel__item:nth-child(#{$i}) {
     opacity: 1;
         }   
-    }
+    }  
+
+
+
+
+    @for $i from 1 through $sliderCount {
+        @if $i == 1 {
+            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child(#{$sliderCount}) {
+            z-index: 3; }
+        }   
+        @else {
+            $x: $i - 1;
+            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child(#{$x}) {
+            z-index: 3; }
+        }   
+    }  
+
+    @for $i from 1 through $sliderCount {
+        @if $i == $sliderCount {
+            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__next label:nth-child(1) {
+            z-index: 3; }
+        }   
+        @else {
+            $x: $i + 1;
+            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__next label:nth-child(#{$x}) {
+            z-index: 3; }
+        }   
+    } 
 
     // @for $i from 1 through $sliderCount {
-    //     .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child( (#{$sliderCount} -1 )){
-    // z-index: 3;
-    //     }
-    // }
-
-    // @for $i from 1 through $sliderCount {
-    //     .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__next label:nth-child( #{$sliderCount}){
-    // z-index: 3;
-    //     }
-    // }
-
-
-
+    //     .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev .carousel__item:nth-child(#{$i}) {
+    // opacity: 1;
+    //     }   
+    // }  
+    
+    
     
      
 }
