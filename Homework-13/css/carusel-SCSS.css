@@ -21,7 +21,7 @@
         height: 100%;
         z-index: 1;
         transition: opacity 1s; }
-        .container .carousel .carousel__items .carousel__item .carousel__item img {
+        .container .carousel .carousel__items .carousel__item img {
           width: 100%;
           height: 100%;
           object-fit: cover; }
