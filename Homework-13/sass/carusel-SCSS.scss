@@ -1,4 +1,5 @@
 @mixin slider ($sliderCount) {
+
     @for $i from 1 through $sliderCount {
         .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__nav > label:nth-child(#{$i}) {
     background: #ccc;      
@@ -10,9 +11,6 @@
     opacity: 1;
         }   
     }  
-
-
-
 
     @for $i from 1 through $sliderCount {
         @if $i == 1 {
@@ -38,25 +36,8 @@
         }   
     } 
 
-    // @for $i from 1 through $sliderCount {
-    //     .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev .carousel__item:nth-child(#{$i}) {
-    // opacity: 1;
-    //     }   
-    // }  
-    
-    
-    
-     
-}
 
-.container {
-   width: 900px;
-    min-height: 600px;
-    margin: 50px auto;
-    overflow: hidden; 
-
-    
-    & .carousel {
+     & .carousel {
     width: 100%;
     position: relative;
 
@@ -97,9 +78,7 @@
         opacity: 0;
     }
 
-    @include slider (5) {
-
-        }
+    
 
     
 
@@ -136,18 +115,48 @@
     }
 
     & .carousel__prev > label {
-     left: 2%;
+        left: 2%;
     }
 
     & .carousel__next > label {
         right: 2%;
     }
 
+
+    & .carousel__prev > label::before,
+    & .carousel__next > label::before,{
+        content: ' ';
+        display: block;
+        height: 30%;
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-30%,-50%) rotate(135deg);
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+
+    & .carousel__prev > label::before {
+        transform: translate(-30%,-50%) rotate(135deg);
+    }
+
+    & .carousel__next > label::before {
+        transform: translate(-65%,-50%) rotate(-45deg);
+    }
     
+    
+     
+}
 
+.container {
+   width: 900px;
+    min-height: 600px;
+    margin: 50px auto;
+    overflow: hidden; 
 
-
-        
+    @include slider (5) {
+    }
 }
 
 
