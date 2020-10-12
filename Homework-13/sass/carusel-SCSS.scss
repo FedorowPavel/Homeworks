@@ -1,42 +1,6 @@
 @mixin slider ($sliderCount) {
 
-    @for $i from 1 through $sliderCount {
-        .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__nav > label:nth-child(#{$i}) {
-    background: #ccc;      
-        }
-    }
-
-    @for $i from 1 through $sliderCount {
-        .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__items .carousel__item:nth-child(#{$i}) {
-    opacity: 1;
-        }   
-    }  
-
-    @for $i from 1 through $sliderCount {
-        @if $i == 1 {
-            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child(#{$sliderCount}) {
-            z-index: 3; }
-        }   
-        @else {
-            $x: $i - 1;
-            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__prev label:nth-child(#{$x}) {
-            z-index: 3; }
-        }   
-    }  
-
-    @for $i from 1 through $sliderCount {
-        @if $i == $sliderCount {
-            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__next label:nth-child(1) {
-            z-index: 3; }
-        }   
-        @else {
-            $x: $i + 1;
-            .carousel > input[type="radio"]:nth-child(#{$i}):checked ~ .carousel__next label:nth-child(#{$x}) {
-            z-index: 3; }
-        }   
-    } 
-
-
+    
      & .carousel {
     width: 100%;
     position: relative;
@@ -72,15 +36,50 @@
         top: 0;
         left: 0;
         opacity: 0;
+
+
+        @for $i from 1 through $sliderCount {
+            &:nth-child(#{$i}) {
+                &:checked {
+                    & ~.carousel__nav > label:nth-child(#{$i}) {
+                        background: #ccc;      
+                    }
+                    & ~ .carousel__items .carousel__item:nth-child(#{$i}) {
+                        opacity: 1;
+                    } 
+                    
+                    @if $i == 1 {   
+                        & ~ .carousel__prev label:nth-child(#{$sliderCount}) {
+                        z-index: 3; 
+                            }
+                    }   
+                    @else {
+                            $x: $i - 1;
+                            & ~ .carousel__prev label:nth-child(#{$x}) {
+                            z-index: 3; 
+                        }
+                    } 
+
+                    @if $i ==  $sliderCount {   
+                        & ~ .carousel__next label:nth-child(1) {
+                        z-index: 3; 
+                            }
+                    }   
+                    @else {
+                            $x: $i + 1;
+                            & ~ .carousel__next label:nth-child(#{$x}) {
+                            z-index: 3; 
+                        }
+                    }
+                }
+            } 
         }
+    
+    }
 
     & .carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item {
         opacity: 0;
     }
-
-    
-
-    
 
     & .carousel__nav {
         position: absolute;
@@ -144,8 +143,6 @@
     & .carousel__next > label::before {
         transform: translate(-65%,-50%) rotate(-45deg);
     }
-    
-    
      
 }
 

@@ -3,46 +3,6 @@
   min-height: 600px;
   margin: 50px auto;
   overflow: hidden; }
-  .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
-    background: #ccc; }
-  .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
-    background: #ccc; }
-  .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
-    background: #ccc; }
-  .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
-    background: #ccc; }
-  .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
-    background: #ccc; }
-  .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
-    opacity: 1; }
-  .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
-    opacity: 1; }
-  .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
-    opacity: 1; }
-  .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
-    opacity: 1; }
-  .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
-    opacity: 1; }
-  .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev label:nth-child(5) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev label:nth-child(1) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev label:nth-child(2) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev label:nth-child(3) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev label:nth-child(4) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next label:nth-child(2) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next label:nth-child(3) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next label:nth-child(4) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next label:nth-child(5) {
-    z-index: 3; }
-  .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next label:nth-child(1) {
-    z-index: 3; }
   .container .carousel {
     width: 100%;
     position: relative; }
@@ -70,6 +30,46 @@
     top: 0;
     left: 0;
     opacity: 0; }
+    .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__nav > label:nth-child(1) {
+      background: #ccc; }
+    .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__items .carousel__item:nth-child(1) {
+      opacity: 1; }
+    .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__prev label:nth-child(5) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(1):checked ~ .carousel__next label:nth-child(2) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__nav > label:nth-child(2) {
+      background: #ccc; }
+    .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__items .carousel__item:nth-child(2) {
+      opacity: 1; }
+    .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__prev label:nth-child(1) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(2):checked ~ .carousel__next label:nth-child(3) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__nav > label:nth-child(3) {
+      background: #ccc; }
+    .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__items .carousel__item:nth-child(3) {
+      opacity: 1; }
+    .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__prev label:nth-child(2) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(3):checked ~ .carousel__next label:nth-child(4) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__nav > label:nth-child(4) {
+      background: #ccc; }
+    .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__items .carousel__item:nth-child(4) {
+      opacity: 1; }
+    .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__prev label:nth-child(3) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(4):checked ~ .carousel__next label:nth-child(5) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__nav > label:nth-child(5) {
+      background: #ccc; }
+    .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__items .carousel__item:nth-child(5) {
+      opacity: 1; }
+    .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__prev label:nth-child(4) {
+      z-index: 3; }
+    .container .carousel > input[type="radio"]:nth-child(5):checked ~ .carousel__next label:nth-child(1) {
+      z-index: 3; }
   .container .carousel > input[type="radio"]:checked ~ .carousel__items .carousel__item {
     opacity: 0; }
   .container .carousel__nav {
